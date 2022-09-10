@@ -2,7 +2,7 @@
 package Persona;
 
 
-public class Persona {
+public abstract class Persona {
     
     private String nombre, apellido, correo, ID;
     

@@ -5,7 +5,7 @@ public class Alumno extends Persona {
     private String grado;
     
     public Alumno(String grado){
-        
+        super(nombre,apellido);
         this.grado=grado;
         
     }
@@ -22,8 +22,5 @@ public class Alumno extends Persona {
     public String toString() {
         return "Alumno{" + "grado=" + grado + '}';
     }
-    
-    
-    
-    
+
 }
