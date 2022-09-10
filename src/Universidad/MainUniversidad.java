@@ -8,7 +8,7 @@ public class MainUniversidad {
         
         String RegistroDeUniversidad[]=new String [1];
         String guardado []=new String [1];
-
+        String test;
         int opcion;
                       
         Scanner scan = new Scanner (System.in);
