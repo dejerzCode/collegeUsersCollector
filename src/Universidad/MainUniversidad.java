@@ -9,6 +9,7 @@ public class MainUniversidad {
         String RegistroDeUniversidad[]=new String [1];
         String guardado []=new String [1];
         String test;
+        String besos;
         int opcion = 0;
                       
         Scanner scan = new Scanner (System.in);
