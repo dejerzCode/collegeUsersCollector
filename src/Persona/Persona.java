@@ -4,7 +4,7 @@ package Persona;
 
 public abstract class Persona {
     
-    private String nombre, apellido, correo, ID;
+    private String nombre, apellido, correo, ID, telefono;
     
     public Persona (String nombre, String apellido, String correo, String ID){
         
