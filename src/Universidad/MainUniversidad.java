@@ -3,11 +3,16 @@ package Universidad;
 import java.util.Scanner;
 
 public class MainUniversidad {
+      static Docente Maestro []=new String [1];
+      static Docente CopiaMaestro []=new String [1];
+      static Alumno student []=new String [1];
+      static Alumno CopiaStudent []=new String [1];
+      static Administrativo admin []=new String [1];
+      static Administrativo CopiaAdmin []=new String [1];
  
     public static void main(String[] args) {
         
-        String RegistroDeUniversidad[]=new String [1];
-        String guardado []=new String [1];
+       
         String test;
         String besos;
         int opcion = 0;
