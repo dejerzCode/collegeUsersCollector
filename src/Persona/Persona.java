@@ -6,12 +6,13 @@ public abstract class Persona {
     
     private String nombre, apellido, correo, ID, telefono;
     
-    public Persona (String nombre, String apellido, String correo, String ID){
+    public Persona (String nombre, String apellido, String correo, String ID, String telefono){
         
         this.nombre = nombre;
         this.apellido=apellido;
         this.correo=correo;
         this.ID=ID;
+        this.telefono = telefono;
 
     }
 
