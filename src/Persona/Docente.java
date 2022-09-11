@@ -5,8 +5,8 @@ public class Docente extends Persona {
     
     private String colegiado;
     
-    public Docente (String asignacion){
-        
+    public Docente (String asignacion, String nombre, String apellido, String correo, String ID, String telefono){
+        super( nombre,  apellido,  correo,  ID,  telefono);
         this.colegiado=colegiado;
                 
     }

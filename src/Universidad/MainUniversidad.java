@@ -1,20 +1,19 @@
 package Universidad;
-
+import Persona.*;
 import java.util.Scanner;
 
 public class MainUniversidad {
-      static Docente Maestro []=new String [1];
-      static Docente CopiaMaestro []=new String [1];
-      static Alumno student []=new String [1];
-      static Alumno CopiaStudent []=new String [1];
-      static Administrativo admin []=new String [1];
-      static Administrativo CopiaAdmin []=new String [1];
+      static Docente Maestro []=new Docente [1];
+      static Docente CopiaMaestro []=new Docente [1];
+      static Alumno student []=new Alumno [1];
+      static Alumno CopiaStudent []=new Alumno [1];
+      static Administrativo admin []=new Administrativo [1];
+      static Administrativo CopiaAdmin []=new Administrativo [1];
  
     public static void main(String[] args) {
         
        
         String test;
-        String besos;
         int opcion = 0;
                       
         Scanner scan = new Scanner (System.in);

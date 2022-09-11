@@ -5,8 +5,8 @@ public class Administrativo extends Persona{
     
     private String cargo;
     
-    public Administrativo (String cargo){
-        
+    public Administrativo (String cargo, String nombre, String apellido, String correo, String ID, String telefono){
+        super( nombre,  apellido,  correo,  ID,  telefono);
         this.cargo=cargo;        
         
     }
