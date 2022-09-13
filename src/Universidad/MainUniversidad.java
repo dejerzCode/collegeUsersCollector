@@ -180,6 +180,49 @@ public class MainUniversidad {
 
   } 
     public static void borrarRegistro(){
+       
+        int eliminar;
+        boolean option = true;
+        int select;
+        Scanner reader = new Scanner (System.in);
+
+        for(int x = 0; x < listaInscripcion.length; x++){
+            if (listaInscripcion[x] == null){
+                  //no se imprime nada
+            }else{
+                System.out.println(x +". "+ listaInscripcion[x]);
+            }
+        }
+        
+        System.out.println("Ingresa el número de la persona que quieras borrar: ");
+        eliminar = reader.nextInt();
+          
+        while(option){
+              
+            Persona[] temp = new Persona[listaInscripcion.length - 1];
+            int restar = listaInscripcion.length - (eliminar + 1 );
+            System.arraycopy(listaInscripcion, 0, temp, 0, eliminar);
+            System.arraycopy(listaInscripcion, eliminar + 1, temp, eliminar, restar);
+            System.out.println("El elemento ha sido eliminado.");
+            System.out.println("¿Desea eliminar otro elemento? \n1. Eliminar otro elemento. \n2. Mostrar la lista actualizada.");
+            select = reader.nextInt();
+              
+            if (select == 1){
+                option = true;
+                  
+            }else{
+
+                for(int r = 0; r < temp.length; r++){
+                    if (temp[r] == null){
+                    }else{
+                        System.out.println(temp[r]);
+                    }
+                }
+
+                option = false;
+            }
+
+        }
     }
 
 }
