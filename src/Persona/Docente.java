@@ -1,27 +1,26 @@
-
 package Persona;
 
 public class Docente extends Persona {
     
     private String colegiado;
     
-    public Docente (String asignacion, String nombre, String apellido, String correo, String ID, String telefono){
+    public Docente (String colegiado, String nombre, String apellido, String correo, String ID, String telefono){
         super( nombre,  apellido,  correo,  ID,  telefono);
         this.colegiado=colegiado;
                 
     }
 
-    public String getAsignacion() {
+    public String getColegiado() {
         return colegiado;
     }
 
-    public void setAsignacion(String asignacion) {
-        this.colegiado = asignacion;
+    public void setColegiado(String Colegiado) {
+        this.colegiado = colegiado;
     }
 
     @Override
     public String toString() {
-        return "Docente{" + "asignacion=" + colegiado + '}';
+        return super.toString() +  "Docente{" + "colegiado=" + colegiado + '}';
     }
     
     

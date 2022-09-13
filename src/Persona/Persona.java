@@ -1,4 +1,3 @@
-
 package Persona;
 
 
@@ -47,11 +46,18 @@ public abstract class Persona {
     public void setID(String ID) {
         this.ID = ID;
     }
+    
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String ID) {
+        this.telefono = telefono;
+    }    
 
     @Override
     public String toString() {
-        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", ID=" + ID + '}';
+        return "Persona{" + "nombre=" + nombre + ", apellido=" + apellido + ", correo=" + correo + ", ID=" + ID + ", telefono=" + telefono + '}';
     }
     
 }
-
