@@ -24,7 +24,7 @@ public class MainUniversidad {
             System.out.println("3. Registrar Administrativo");
             System.out.println("4. Mostrar Lista");
             System.out.println("5. Borrar Registro");
-            System.out.println("5. Salir\n");
+            System.out.println("6. Salir\n");
             System.out.println("INGRESE UNA OPCION");
             opcion= scan.nextInt();
             switch (opcion) {
