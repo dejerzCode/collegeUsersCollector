@@ -25,7 +25,8 @@ public class MainUniversidad {
             System.out.println("4. Mostrar Lista");
             System.out.println("5. Borrar Registro");
             System.out.println("6. Modificar Registro");
-            System.out.println("7. Salir\n");
+            System.out.println("7. Buscar Registro");
+            System.out.println("8. Salir\n");
             System.out.println("INGRESE UNA OPCION");
             opcion= scan.nextInt();
             switch (opcion) {
@@ -48,15 +49,21 @@ public class MainUniversidad {
                     modificarRegistro();
                     break;
                 case 7:
+                    buscarRegistro();
+                    break;
+                case 8:
                     System.out.println("Adiós :)");
                     break;
                 default:
                     System.out.println("Error, seleción incorrecta");
             }
-        }while (opcion !=7);
+        }while (opcion !=8);
 
     }
-public static String modificarAtributo(String _getAtributo){
+    public static int modificarATributo(int _getAtributo){
+        return 0;
+    }
+    public static String modificarAtributo(String _getAtributo){
     Scanner scan = new Scanner (System.in);
     System.out.println(_getAtributo);
     String valor = "";
@@ -76,7 +83,6 @@ public static String modificarAtributo(String _getAtributo){
         System.out.println("Ingrese el índice a modificar");
         index = scan.nextInt();
         if(listaInscripcion[index] instanceof Object){
-            //System.out.println(listaInscripcion[index].toString());
             listaInscripcion[index].setNombre(modificarAtributo(listaInscripcion[index].getNombre()));
             listaInscripcion[index].setApellido(modificarAtributo(listaInscripcion[index].getApellido()));
             listaInscripcion[index].setCorreo(modificarAtributo(listaInscripcion[index].getCorreo()));
@@ -86,7 +92,20 @@ public static String modificarAtributo(String _getAtributo){
         }
 
     }
-    
+
+    public static void buscarRegistro(){
+        Scanner scan = new Scanner (System.in);
+        System.out.println("Ingrese el índice a buscar");
+        int index = scan.nextInt();
+        if(listaInscripcion[index] instanceof Persona){
+            System.out.println(index + ". " +listaInscripcion[index].toString());
+            System.out.println("-----------------------------------------");
+        } else {
+            System.out.println("Este objeto no existe");
+        }
+
+    }
+
     public static void registrarAlumno(){
                   int opcion2=0;
             do{
@@ -124,14 +143,21 @@ public static String modificarAtributo(String _getAtributo){
                 }
             } 
            
-            System.out.println("1. Desea Registrar un Nuevo Alumno");
-            System.out.println("2. Regresar al Menu Anterior");
-            System.out.println("Ingrese el Número de la Opción Deseada");
-            opcion2 =scan.nextInt();
+
+            opcion2 = RepetirRegistro();
             
             }while(opcion2!=2);
         
     }
+
+    public static int RepetirRegistro(){
+        Scanner scan = new Scanner (System.in);
+        System.out.println("1. Desea Registrar un Nuevo Personal");
+        System.out.println("2. Regresar al Menu Anterior");
+        System.out.println("Ingrese el Número de la Opción Deseada");
+        return scan.nextInt();
+    }
+
     public static void registrarDocente(){
                 int opcion2=0;
             do{
@@ -169,10 +195,8 @@ public static String modificarAtributo(String _getAtributo){
                 }
             } 
            
-            System.out.println("1. Desea Registrar un Nuevo Docente");
-            System.out.println("2. Regresar al Menu Anterior");
-            System.out.println("Ingrese el Número de la Opción Deseada");
-            opcion2 =scan.nextInt();
+
+            opcion2 =RepetirRegistro();
             
             }while(opcion2!=2);
     }
@@ -211,37 +235,41 @@ public static String modificarAtributo(String _getAtributo){
                     listaInscripcion [indice] = nuevoAdministrativo;
                     break;
                 }
-            } 
-           
-            System.out.println("1. Desea Registrar un Nuevo Personal");
-            System.out.println("2. Regresar al Menu Anterior");
-            System.out.println("Ingrese el Número de la Opción Deseada");
-            opcion2 =scan.nextInt();
+            }
+            opcion2 =RepetirRegistro();
             
             }while(opcion2!=2);
     }
     public static void mostrarLista(){
                 if (listaInscripcion.length !=0){
-                    System.out.println(Arrays.toString(listaInscripcion));
+                    imprirLista();
                 }else{
                     System.out.println("Su lista está vacia");  
                 }  
 
-  } 
+  }
+
+  public static void imprirLista(){
+      for(int x = 0; x < listaInscripcion.length; x++){
+          if (listaInscripcion[x] == null){
+              //no se imprime nada
+          }else{
+              System.out.println(x +". "+ listaInscripcion[x]);
+          }
+      }
+      System.out.println("-----------------------------------------");
+  }
+
+
+
+
     public static void borrarRegistro(){
        
         int eliminar;
         boolean option = true;
         int select;
         Scanner reader = new Scanner (System.in);
-
-        for(int x = 0; x < listaInscripcion.length; x++){
-            if (listaInscripcion[x] == null){
-                  //no se imprime nada
-            }else{
-                System.out.println(x +". "+ listaInscripcion[x]);
-            }
-        }
+        imprirLista();
         
         System.out.println("Ingresa el número de la persona que quieras borrar: ");
         eliminar = reader.nextInt();
