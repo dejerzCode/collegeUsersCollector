@@ -24,17 +24,66 @@ public class MainUniversidad {
             System.out.println("3. Registrar Administrativo");
             System.out.println("4. Mostrar Lista");
             System.out.println("5. Borrar Registro");
-            System.out.println("6. Salir\n");
+            System.out.println("6. Modificar Registro");
+            System.out.println("7. Salir\n");
             System.out.println("INGRESE UNA OPCION");
             opcion= scan.nextInt();
             switch (opcion) {
-                case 1 -> registrarAlumno ();
-                case 2 -> registrarDocente ();
-                case 3 -> registrarAdministrativo ();
-                case 4 -> mostrarLista ();
-                case 5 -> borrarRegistro  ();
+                case 1:
+                    registrarAlumno ();
+                    break;
+                case 2:
+                    registrarDocente ();
+                    break;
+                case 3:
+                    registrarAdministrativo ();
+                    break;
+                case 4:
+                    mostrarLista ();
+                    break;
+                case 5:
+                    borrarRegistro  ();
+                    break;
+                case 6:
+                    modificarRegistro();
+                    break;
+                case 7:
+                    System.out.println("Adiós :)");
+                    break;
+                default:
+                    System.out.println("Error, seleción incorrecta");
             }
-        }while (opcion !=5);
+        }while (opcion !=7);
+
+    }
+public static String modificarAtributo(String _getAtributo){
+    Scanner scan = new Scanner (System.in);
+    System.out.println(_getAtributo);
+    String valor = "";
+    valor = scan.nextLine();
+    if (valor != ""){
+        return valor;
+    } else {
+        return _getAtributo;
+    }
+}
+
+
+
+    public static void modificarRegistro(){
+        Scanner scan = new Scanner (System.in);
+        int index = 0;
+        System.out.println("Ingrese el índice a modificar");
+        index = scan.nextInt();
+        if(listaInscripcion[index] instanceof Object){
+            //System.out.println(listaInscripcion[index].toString());
+            listaInscripcion[index].setNombre(modificarAtributo(listaInscripcion[index].getNombre()));
+            listaInscripcion[index].setApellido(modificarAtributo(listaInscripcion[index].getApellido()));
+            listaInscripcion[index].setCorreo(modificarAtributo(listaInscripcion[index].getCorreo()));
+            listaInscripcion[index].setTelefono(modificarAtributo(listaInscripcion[index].getTelefono()));
+        } else {
+            System.out.println("Este objeto no existe");
+        }
 
     }
     
