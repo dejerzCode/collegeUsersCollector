@@ -83,9 +83,13 @@ public class MainUniversidad {
         System.out.println("Ingrese el índice a modificar");
         index = scan.nextInt();
         if(listaInscripcion[index] instanceof Object){
+            System.out.println("Ingrese la modificacion de Nombre");
             listaInscripcion[index].setNombre(modificarAtributo(listaInscripcion[index].getNombre()));
+            System.out.println("Ingrese la modificacion de Apellido");
             listaInscripcion[index].setApellido(modificarAtributo(listaInscripcion[index].getApellido()));
+            System.out.println("Ingrese la modificacion de Correo");
             listaInscripcion[index].setCorreo(modificarAtributo(listaInscripcion[index].getCorreo()));
+            System.out.println("Ingrese la modificacion de Telefono");
             listaInscripcion[index].setTelefono(modificarAtributo(listaInscripcion[index].getTelefono()));
         } else {
             System.out.println("Este objeto no existe");
