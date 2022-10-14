@@ -20,7 +20,7 @@ public class Docente extends Persona {
 
     @Override
     public String toString() {
-        return super.toString() +  "Docente{" + "colegiado=" + colegiado + '}';
+        return super.toString() +  "Docente" + "colegiado=" + colegiado;
     }
     
     

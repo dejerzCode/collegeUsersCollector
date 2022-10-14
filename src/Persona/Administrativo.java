@@ -20,7 +20,7 @@ public class Administrativo extends Persona{
 
     @Override
     public String toString() {
-        return super.toString() +  "Administrativo{" + "cargo=" + cargo + '}';
+        return super.toString() +  "Administrativo" + "cargo=" + cargo;
     }
     
     

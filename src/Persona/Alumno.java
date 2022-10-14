@@ -20,7 +20,7 @@ public class Alumno extends Persona {
 
     @Override
     public String toString() {
-        return super.toString() +  "Alumno{" + "grado=" + grado + '}';
+        return super.toString() +  "Alumno" + "grado =" + grado;
     }
 
 }
